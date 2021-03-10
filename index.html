@@ -7,10 +7,23 @@
   </head>
   <body>
     <div id="vue-app">
+      <h5>Data Binding</h5>
+      <a href="website">Google</a> <!-- Wrong -->
+      <a href="{{website}}">Google</a> <!-- Wrong -->
+      <a href="website">Google</a> <!-- Wrong -->
+      <a v-bind:href="website">Google</a>
+      <a :href="website">Google</a>
+      <input type="text" value="John" /> 
+      <input type="text" v-bind:value="name" />
+      {{websiteTag}} <!-- Wrong -->
+      <p v-html="websiteTag"></p>
+
+      <h5>Data and Methods</h5>
       <p>{{ greet() }}</p>
       <p>{{ hello('World!') }}</p>
       <p>Name: {{ name }}</h1>
       <p>Job: {{ job }}</h1>
+
     </div>
 
     {{ name }} <!-- Does not work as expected - out of vue-app selector. -->
