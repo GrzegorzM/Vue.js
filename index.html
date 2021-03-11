@@ -7,22 +7,40 @@
   </head>
   <body>
     <div id="vue-app">
-      <h5>Data Binding</h5>
-      <a href="website">Google</a> <!-- Wrong -->
-      <a href="{{website}}">Google</a> <!-- Wrong -->
-      <a href="website">Google</a> <!-- Wrong -->
-      <a v-bind:href="website">Google</a>
-      <a :href="website">Google</a>
-      <input type="text" value="John" /> 
-      <input type="text" v-bind:value="name" />
-      {{websiteTag}} <!-- Wrong -->
-      <p v-html="websiteTag"></p>
+      <fieldset>
+        <legend>Events</legend>
+        <p>Age: {{age}}</p>
+        <button v-on:click="age++">Add year</button>
+        <button v-on:click="age--">Subtract year</button>
+        <button v-on:click="add">Add year</button>
+        <button v-on:click="subtract">Subtract year</button>
+        <button v-on:click="addAge(1)">Add year</button>
+        <button @click="subtractAge(1)">Subtract year</button>
+        <button v-on:dblclick="addAge(10)">Add 10 years</button>
+        <button @dblclick="subtractAge(10)">Subtract 10 years</button>
+        <div id="canvas" v-on:mousemove="updateXY">{{x}}, {{y}}</div>
+      </fieldset>
 
-      <h5>Data and Methods</h5>
-      <p>{{ greet() }}</p>
-      <p>{{ hello('World!') }}</p>
-      <p>Name: {{ name }}</h1>
-      <p>Job: {{ job }}</h1>
+      <fieldset>
+        <legend>Data Binding</legend>
+        <a href="website">Google</a> <!-- Wrong -->
+        <a href="{{website}}">Google</a> <!-- Wrong -->
+        <a href="website">Google</a> <!-- Wrong -->
+        <a v-bind:href="website">Google</a>
+        <a :href="website">Google</a>
+        <input type="text" value="John" /> 
+        <input type="text" v-bind:value="name" />
+        {{websiteTag}} <!-- Wrong -->
+        <p v-html="websiteTag"></p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Data and Methods</legend>
+        <p>{{ greet() }}</p>
+        <p>{{ hello('World!') }}</p>
+        <p>Name: {{ name }}</h1>
+        <p>Job: {{ job }}</h1>
+      </fieldset>
 
     </div>
 
