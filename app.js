@@ -32,5 +32,8 @@ new Vue({
       this.x = event.offsetX;
       this.y = event.offsetY;
     },
-  }
+    showAlert: function(){
+      alert('You clicked blocked link.');
+    },
+  },
 });
