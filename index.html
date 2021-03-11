@@ -8,6 +8,14 @@
   <body>
     <div id="vue-app">
       <fieldset>
+        <legend>Event Modifiers</legend> <!-- https://vuejs.org/v2/guide/events.html#Event-Modifiers -->
+        <p>Age: {{age}}</p>
+        <button v-on:click.once="age++">Add year</button>
+        <button @click.once="age--">Subtract year</button>
+        <a v-on:click.prevent="showAlert" href="https://www.google.com/">Google</a>
+      </fieldset>
+      
+      <fieldset>
         <legend>Events</legend>
         <p>Age: {{age}}</p>
         <button v-on:click="age++">Add year</button>
