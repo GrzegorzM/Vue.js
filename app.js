@@ -35,5 +35,11 @@ new Vue({
     showAlert: function(){
       alert('You clicked blocked link.');
     },
+    logName: function(){
+      console.log('You entered name.');
+    },
+    logAge: function(){
+      console.log('You entered age.');
+    },
   },
 });
