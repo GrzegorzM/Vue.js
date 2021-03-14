@@ -41,5 +41,11 @@ new Vue({
     logAge: function(){
       console.log('You entered age.');
     },
+    setName: function(name){
+      this.name = name;
+    },
+    setAge: function(age){
+      this.age = age;
+    },
   },
 });

@@ -8,6 +8,16 @@
   <body>
     <div id="vue-app">
       <fieldset>
+        <legend>Two-Way Data Binding</legend>
+        <label>Name:</label>
+        <input type="text" v-model="name" />
+        <span>{{name}}</span>
+        <label>Age:</label>
+        <input type="text" v-model="age" />
+        <span>{{age}}</span>
+      </fieldset>
+
+      <fieldset>
         <legend>Keyboard Events</legend>
         <label>Name:</label>
         <input type="text" v-on:keyup="logName" />
