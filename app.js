@@ -8,6 +8,8 @@ new Vue({
     websiteTag: '<a href="https://www.google.com/">Google</a>',
     x: 0,
     y: 0,
+    a: 0,
+    b: 0,
   },
   methods: {
     greet: function(){
@@ -47,5 +49,23 @@ new Vue({
     setAge: function(age){
       this.age = age;
     },
+    // addToA: function(){
+    //   console.log('addToA');
+    //   return this.a + this.age;
+    // },
+    // addToB: function(){
+    //   console.log('addToB');
+    //   return this.b + this.age;
+    // }
+  },
+  computed: {
+    addToA: function(){
+      console.log('addToA');
+      return this.a + this.age;
+    },
+    addToB: function(){
+      console.log('addToB');
+      return this.b + this.age;
+    }
   },
 });
