@@ -7,6 +7,20 @@
   </head>
   <body>
     <div id="vue-app">
+      <fieldset class="dynamic-css">
+        <legend>Dynamic CSS Classes</legend>
+        <div v-on:click="available = !available" v-bind:class="{red: true, blue: true, available: available}">
+            <span>
+              Click
+            </span>
+        </div>
+        <button v-on:click="nearby = !nearby">Toggle Nearby</button>
+        <button v-on:click="available = !available">Toggle Available</button>
+        <div v-bind:class="compClasses">
+          <span>Click</span>
+        </div>
+      </fieldset>
+
       <fieldset>
         <legend>Computed Properties</legend>
         <button v-on:click="a++">Add to A</button>

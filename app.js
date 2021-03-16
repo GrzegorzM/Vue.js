@@ -10,6 +10,8 @@ new Vue({
     y: 0,
     a: 0,
     b: 0,
+    available: true,
+    nearby: true,
   },
   methods: {
     greet: function(){
@@ -66,6 +68,12 @@ new Vue({
     addToB: function(){
       console.log('addToB');
       return this.b + this.age;
-    }
+    },
+    compClasses: function(){
+      return {
+        available: this.available,
+        nearby: this.nearby,
+      };
+    },
   },
 });
