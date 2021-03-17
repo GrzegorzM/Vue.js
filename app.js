@@ -12,6 +12,8 @@ new Vue({
     b: 0,
     available: true,
     nearby: true,
+    error: false,
+    success: false,
   },
   methods: {
     greet: function(){

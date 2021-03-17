@@ -7,6 +7,17 @@
   </head>
   <body>
     <div id="vue-app">
+      <fieldset>
+        <legend>Conditionals</legend>
+        <button v-on:click="error = !error">Toggle Error</button>
+        <button v-on:click="success = !success">Toggle Success</button>
+        <!-- removing from the DOM -->
+        <!-- <p v-if="error">There has been an error.</p> 
+        <p v-else-if="success">Succeeded.</p> -->
+        <p v-show="error">There has been an error.</p> <!-- setting style="display: none" -->
+        <p v-show="success">Succeeded.</p>
+      </fieldset>
+
       <fieldset class="dynamic-css">
         <legend>Dynamic CSS Classes</legend>
         <div v-on:click="available = !available" v-bind:class="{red: true, blue: true, available: available}">
