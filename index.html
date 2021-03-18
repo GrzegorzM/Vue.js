@@ -8,6 +8,29 @@
   <body>
     <div id="vue-app">
       <fieldset>
+        <legend>Looping</legend>
+        <ul>
+          <li v-for="character in characters">{{character}}</li>
+        </ul>
+        <ul>
+          <li v-for="(student, index) in students"><b>{{index}}</b>). Name: <b>{{student.name}}</b>, Age: <b>{{student.age}}</b></li>
+        </ul>
+        <div v-for="student in students">
+          <h4>Name: {{student.name}}</h4>
+          <p>Age: {{student.age}}</p>
+        </div>
+        <template v-for="student in students"><!-- Looping without a real HTML element -->
+          <h4>Name: {{student.name}}</h4>
+          <p>Age: {{student.age}}</p>
+        </template>
+        <template v-for="student in students">
+          <div v-for="(key, value) in student">
+            <p>{{value}} - {{key}}</p>
+          </div>
+        </template>
+      </fieldset>
+
+      <fieldset>
         <legend>Conditionals</legend>
         <button v-on:click="error = !error">Toggle Error</button>
         <button v-on:click="success = !success">Toggle Success</button>
