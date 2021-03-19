@@ -85,3 +85,37 @@ new Vue({
     },
   },
 });
+
+var one = new Vue({
+  el: '#vue-app-one',
+  data:{
+    title: 'Vue app 1',
+  },
+  methods: {
+    
+  },
+  computed:{
+    greet: function(){
+      return 'Hello from app one.';
+    },
+  },
+});
+
+var two = new Vue({
+  el: '#vue-app-two',
+  data:{
+    title: 'Vue app 2',
+  },
+  methods: {
+    changeTitle: function(){
+      one.title = 'The title has been changed from the Vue 2 Instance!';
+    },
+  },
+  computed:{
+    greet: function(){
+      return 'Hello from app two.';
+    },
+  },
+});
+
+two.title = 'The title has been changed from the Outside!';
