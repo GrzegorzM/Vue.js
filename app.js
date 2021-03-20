@@ -86,6 +86,25 @@ new Vue({
   },
 });
 
+var sharedData = {
+  name: 'Outside Component',
+};
+
+Vue.component('greeting', {
+  template: '<p>Hello from component! {{name}}. <button v-on:click="changeName">Change Name</button></p>',
+  data: function(){
+    return {
+      name: 'Greeting Component',
+    };
+    // return sharedData;
+  },
+  methods: { 
+    changeName: function(){
+      this.name = 'Greeting Component Changed Name'
+    },
+  },
+});
+
 var one = new Vue({
   el: '#vue-app-one',
   data:{
