@@ -132,6 +132,19 @@
 
     </div>
 
+    <div id="punchbag-game">
+      <div id="bag" v-bind:class="{burst: ended}"></div>
+      <div id="bag-health">
+        <div v-bind:style="{width: health + '%'}">
+          <span>{{health}}</span>
+        </div>
+      </div>
+      <div id="controls">
+        <button v-on:click="punch" v-show="!ended">Punch</button>
+        <button v-on:click="restartGame">Restart</button>
+      </div>
+    </div>
+
     <fieldset>
       <legend>Component</legend>
       <div id="vue-app-one">

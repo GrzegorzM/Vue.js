@@ -21,3 +21,32 @@
   content: "nearby";
   margin-left: 10px;
 }
+
+#bag{
+  width: 200px;
+  height: 500px;
+  margin: 0 auto;
+  background: url(./img/bag.png) center no-repeat;
+  background-size: 80%;
+}
+
+#bag.burst{
+  background: url(./img/bag-burst.png) center no-repeat;
+  background-size: 80%;
+}
+
+#bag-health{
+  width: 200px;
+  border: 2px black solid;
+  margin: 0 auto 20 auto;
+}
+
+#bag-health div{
+  height: 20px;
+  background: crimson;
+}
+
+#controls{
+  width: 120px;
+  margin: 0 auto;
+}
