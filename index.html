@@ -7,6 +7,15 @@
   </head>
   <body>
     <div id="vue-app">
+      <fieldset>
+        <legend>Refs</legend>
+        <input type="text" ref="input" />
+        <button v-on:click="readRefs">Submit</button>
+        <p>Your favorite food: {{output}}</p>
+        <div ref="divRef">
+          Hello from Div element!
+        </div>
+      </fieldset>
 
       <fieldset>
         <legend>Looping</legend>

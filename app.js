@@ -20,6 +20,7 @@ new Vue({
       { name: 'Mary', age: 23 },
       { name: 'Johnny', age: 21 },
     ],
+    output: 'kebab',
   },
   methods: {
     greet: function(){
@@ -58,6 +59,12 @@ new Vue({
     },
     setAge: function(age){
       this.age = age;
+    },
+    readRefs: function(){
+      console.log(this.$refs);
+      console.log(this.$refs.input.value);
+      this.output = this.$refs.input.value;
+      console.log('InnerText of Div element = ' + this.$refs.divRef.innerText);
     },
     // addToA: function(){
     //   console.log('addToA');
