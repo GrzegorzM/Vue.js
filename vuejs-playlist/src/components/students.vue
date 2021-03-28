@@ -11,17 +11,31 @@
 
 <script>
 export default {
+  // props: ['students'], // No validation. It's possible to pass string.
+  props: { 
+    students:{
+      type: Array,
+      required: true
+    }
+  },
+
   data(){
-    return { 
-      students: [
-        { name: 'Bob', gender: 'Male', show:false },
-        { name: 'Mary', gender: 'Female', show:false },
-        { name: 'John', gender: 'Male', show:false },
-        { name: 'Barbara', gender: 'Female', show:false },
-        { name: 'Kate', gender: 'Female', show:false },
-        { name: 'Mark', gender: 'Male', show:false },
-        { name: 'Sue', gender: 'Female', show:false }
-      ]
+    // return { 
+    //   students: [
+    //     { name: 'Bob', gender: 'Male', show:false },
+    //     { name: 'Mary', gender: 'Female', show:false },
+    //     { name: 'John', gender: 'Male', show:false },
+    //     { name: 'Barbara', gender: 'Female', show:false },
+    //     { name: 'Kate', gender: 'Female', show:false },
+    //     { name: 'Mark', gender: 'Male', show:false },
+    //     { name: 'Sue', gender: 'Female', show:false }
+    //   ]
+    // }
+  },
+
+  methods: {
+    accessPropMethod: function(){
+      this.students;
     }
   }
 }
