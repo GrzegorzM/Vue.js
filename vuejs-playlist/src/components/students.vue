@@ -6,6 +6,7 @@
         <h6 v-show="student.show">{{ student.gender }}</h6>
       </li>
     </ul>
+    <button v-on:click="deleteStudent">Delete Student</button>
   </div>
 </template>
 
@@ -36,6 +37,9 @@ export default {
   methods: {
     accessPropMethod: function(){
       this.students;
+    },
+    deleteStudent: function(){
+      this.students.pop();
     }
   }
 }

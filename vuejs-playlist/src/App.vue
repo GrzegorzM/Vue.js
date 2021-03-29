@@ -1,11 +1,13 @@
 <template>
   <!-- <div id="app"> -->
   <div>
-    <app-header></app-header>
+    <app-header v-bind:title="title"></app-header>
     <h1>{{ title }}</h1>
     <p>{{ greeting() }}</p>
     <students v-bind:students="students"></students>
-    <app-footer></app-footer>
+    <hr>
+    <students v-bind:students="students"></students>
+    <app-footer :title="title"></app-footer>
   </div>
 </template>
 
@@ -30,7 +32,7 @@ export default {
   // name: 'app',
   data () { // same as "data: function(){}"
     return {
-      title: 'Hello from Vue.',
+      title: 'Hello from App.vue.',
       students: [
         { name: 'Bob', gender: 'Male', show:false },
         { name: 'Mary', gender: 'Female', show:false },
