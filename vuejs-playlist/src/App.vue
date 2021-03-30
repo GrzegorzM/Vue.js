@@ -1,7 +1,7 @@
 <template>
   <!-- <div id="app"> -->
   <div>
-    <app-header v-bind:title="title"></app-header>
+    <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
     <h1>{{ title }}</h1>
     <p>{{ greeting() }}</p>
     <students v-bind:students="students"></students>
@@ -48,6 +48,9 @@ export default {
   methods: {
     greeting(){
       return 'Hey there!'
+    },
+    updateTitle: function(updatedTitle){
+      this.title = updatedTitle;
     }
   },
 }

@@ -20,7 +20,8 @@ export default {
 
   methods:{
     changeTitle: function(){
-      this.title = 'Vue Header changed';
+      // this.title = 'Vue Header changed'; // Changes the title locally in the component.
+      this.$emit('changeTitle', 'Vue Header changed using emit');
     }
   },
 }
