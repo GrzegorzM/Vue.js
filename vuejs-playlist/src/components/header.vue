@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import { bus } from '../main.js';
+
 export default {
   props:{
     title: {
@@ -21,7 +23,9 @@ export default {
   methods:{
     changeTitle: function(){
       // this.title = 'Vue Header changed'; // Changes the title locally in the component.
-      this.$emit('changeTitle', 'Vue Header changed using emit');
+      // this.$emit('changeTitle', 'Vue Header changed using emit'); // Changes the title in the parent component, so titles in the child component are also updated.
+      this.title = 'Vue Header changed';
+      bus.$emit('titleChanged', 'Vue Header changed using bus');
     }
   },
 }
